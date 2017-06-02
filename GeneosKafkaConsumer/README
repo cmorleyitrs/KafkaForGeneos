@@ -1,0 +1,21 @@
+Kafka Consumer
+**************
+Connor Morley  2016/17
+
+
+Purpose
+*******
+This application is used to pull information from a kafka broker with a specific target (xpath(s)) and topic. This app also allows for the specification of offset within the broker in order to isolate specific time periods of information. Primarily this app can be used as a blunt tool to manually extract specific information from a kafka broken related to a gateway for further analysis or assessment. 
+
+
+How To
+******
+The application works via the settings.properties file. In this file the user needs to specify the target kafka location and port, the topic they wish to analyse and the list of xpaths (comma seperated) that they wish to watch for within the kafka messages of the speicified topic. The user can also specify an offset point if they wish via the "seekOffset" value, however this should be reservered for advanced users only who understand kafka offsets. The kafka port can be identified either through tools such as netstat or by observing the brokers configuration files. 
+
+
+Additional information
+**********************
+A full list of geneos configured kafka topics can be found here: 	https://ice.itrsgroup.com/display/dev/Publishing+via+Kafka
+
+Full information on kafka can be found here:	https://kafka.apache.org/
+
